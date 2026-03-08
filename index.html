@@ -5,6 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG Navegador - Otimizado</title>
     <style>
+        /* ============ RESPONSIVIDADE MOBILE ============ */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column !important;
+                padding: 10px !important;
+                gap: 10px !important;
+            }
+            
+            .game-section {
+                width: 100% !important;
+                flex: none !important;
+            }
+            
+            canvas {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+            }
+            
+            .sidebar {
+                width: 100% !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                gap: 8px !important;
+            }
+            
+            .sidebar .panel {
+                flex: 1 1 calc(50% - 4px) !important;
+                min-width: 140px !important;
+                max-height: none !important;
+                padding: 8px !important;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            
+            .stat-item {
+                padding: 5px !important;
+                font-size: 10px !important;
+            }
+            
+            .stat-label {
+                font-size: 7px !important;
+            }
+            
+            .stat-value {
+                font-size: 11px !important;
+            }
+            
+            .ui-panel {
+                padding: 10px !important;
+            }
+            
+            .panel-title {
+                font-size: 10px !important;
+            }
+            
+            .upgrade-button {
+                padding: 5px 6px !important;
+                font-size: 8px !important;
+            }
+            
+            .metric-item {
+                font-size: 8px !important;
+                padding: 3px !important;
+            }
+            
+            .difficulty-panel button {
+                font-size: 8px !important;
+                padding: 4px 6px !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                font-size: 12px !important;
+            }
+            
+            .container {
+                padding: 5px !important;
+            }
+            
+            .sidebar .panel {
+                flex: 1 1 100% !important;
+                min-width: 100% !important;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            .stat-item {
+                padding: 4px !important;
+            }
+            
+            .panel {
+                padding: 6px !important;
+            }
+            
+            .difficulty-panel, .metrics-panel, .shop-panel {
+                max-height: 150px !important;
+                overflow-y: auto !important;
+            }
+            
+            /* Ajustar botões de menu para mobile */
+            .menu h1 {
+                font-size: 28px !important;
+            }
+            
+            .menu h2 {
+                font-size: 22px !important;
+            }
+            
+            .menu button {
+                min-width: 180px !important;
+                padding: 10px 25px !important;
+                font-size: 14px !important;
+            }
+            
+            /* Ajustar modal para mobile */
+            .modal-content {
+                max-width: 90% !important;
+                padding: 15px !important;
+            }
+            
+            .death-content {
+                max-width: 90% !important;
+                padding: 20px !important;
+            }
+            
+            .death-title {
+                font-size: 22px !important;
+            }
+            
+            .death-stats {
+                padding: 12px !important;
+            }
+            
+            .death-stat {
+                font-size: 11px !important;
+            }
+            
+            /* Ajustar botões superiores */
+            .menu + div {
+                top: 5px !important;
+                right: 5px !important;
+                gap: 3px !important;
+            }
+            
+            .menu + div button {
+                width: 50px !important;
+                padding: 3px !important;
+                font-size: 8px !important;
+            }
+        }
+
+        /* Touch controls positioning for mobile */
+        @media (max-width: 900px) {
+            #mobileControls {
+                display: block !important;
+                bottom: 10px !important;
+                left: 10px !important;
+            }
+            
+            #mobileFireBtn {
+                display: block !important;
+                bottom: 20px !important;
+                right: 20px !important;
+                width: 70px !important;
+                height: 70px !important;
+            }
+            
+            #mobileFireBtn div {
+                font-size: 24px !important;
+                margin-top: 16px !important;
+            }
+            
+            #joystickArea {
+                width: 100px !important;
+                height: 100px !important;
+            }
+            
+            #joystickKnob {
+                width: 40px !important;
+                height: 40px !important;
+            }
+        }
+
+        /* ============ FIM RESPONSIVIDADE ============ */
+
+        /* ============ ESTILOS ORIGINAIS ============ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: linear-gradient(135deg, #0a0e27 0%, #1a1a4d 50%, #0a0e27 100%);
