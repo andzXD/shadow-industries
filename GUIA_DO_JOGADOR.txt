@@ -1,0 +1,191 @@
+🎮 COMO JOGAR RPG OTIMIZADO 🎮
+════════════════════════════════════════════════════════════════
+
+📋 CONTROLES:
+─────────────
+W / ↑        → Mover para cima
+S / ↓        → Mover para baixo
+A / ←        → Mover para esquerda
+D / →        → Mover para direita
+
+🖱️ MOUSE:
+─────────
+Clique em qualquer upgrade na loja para comprar com moedas (⭐)
+
+⚙️ SELETOR DE DIFICULDADE:
+──────────────────────────
+↑ Aumentar → Mais desafio, mas mais moedas e XP
+↓ Reduzir   → Menos desafio, menos recompensas
+
+════════════════════════════════════════════════════════════════
+
+💰 ECONOMIA:
+────────────
+⭐ MOEDAS:        Usadas para comprar upgrades na loja
+                   Ganho: +10⭐ por inimigo comum
+                           +300⭐ por boss derrotado
+                           +50⭐ ao completar uma wave
+
+XP EXPERIENCE:   Usadas para subir de nível
+                  Ganho: ~15XP por inimigo comum
+                         +500XP por boss derrotado
+                  Levelar destrava escolha de 3 upgrades
+
+════════════════════════════════════════════════════════════════
+
+🎯 OBJETIVOS:
+──────────────
+1. Sobreviva o máximo de waves possível
+2. Derrote todos os inimigos em cada wave
+3. Derrotar bosses para grandes recompensas
+4. Compre upgrades estrategicamente
+5. Suba de nível para ficar mais forte
+6. Prepare-se para o próximo boss!
+
+════════════════════════════════════════════════════════════════
+
+🏆 ESTATÍSTICAS RASTREADAS:
+────────────────────────────
+📊 No painel esquerdo você verá:
+
+Level:              Seu nível atual
+XP:                 Experiência (necessária para subir nível)
+Moedas:            Saldo de ⭐
+HP:                 Saúde atual / máxima
+Dano:              Dano dos seus ataques
+Defesa:            Redução de dano recebido
+
+Tiros:             Número de projéteis por disparo
+Dano Proj:         Multiplicador de dano dos projéteis
+Velocidade Proj:   Quão rápido viajam
+Tamanho Proj:      Tamanho dos projéteis
+Efeitos:           Status effects aplicados (🔥❄️💣etc)
+
+DPS Seu:           Dano por segundo que você causa
+DPS Inimigos:      Dano por segundo que você sofre
+Balanço:           Seu DPS vs DPS inimigos
+                   🟢 Verde = você vence
+                   🟡 Amarelo = equilibrado
+                   🔴 Vermelho = cuidado!
+
+K/D Ratio:         Quantidade de kills vs dano recebido
+
+════════════════════════════════════════════════════════════════
+
+🎁 SISTEMA DE LEVEL UP:
+────────────────────────
+Ao atingir o XP necessário:
+• Uma modal aparece com 3 upgrades aleatórios
+• Escolha 1 deles para obter instantaneamente
+• Pode ser um upgrade base ou projétil especial
+• Sua vida e dano base aumentam automaticamente
+
+════════════════════════════════════════════════════════════════
+
+🛍️ LOJA (Shopping):
+──────────────────
+A loja mostra upgrades que você pode comprar com moedas:
+
+🟢 VERDE   = Você tem moedas suficientes (clique para comprar)
+🔴 VERMELHO = Você não tem moedas suficientes (desabilitado)
+⚫ DESABILITADO = Já comprou esse upgrade especial
+
+ESTRATÉGIA: Foque em upgrades que aumentam seu DPS versus
+o DPS dos inimigos. Veja o balanço no painel de Métricas!
+
+════════════════════════════════════════════════════════════════
+
+👹 TIPOS DE INIMIGOS:
+──────────────────────
+🔴 Comum       - Equilibrado, apare com frequência
+🟣 Rápido      - Frágil mas rápido
+🔵 Tanque      - Muita vida, lento
+🟡 Ágil        - Rápido e forte
+⚪ Resistente  - Durável
+🟢 Venenoso    - Aplicam veneno (dano contínuo)
+🩵 Espelho     - Podem refletir
+🟠 Fogo        - Causam queimadura
+🩶 Gelo        - Causam congelamento
+
+════════════════════════════════════════════════════════════════
+
+👹 BOSSES (Inimigos Épicos):
+─────────────────────────────
+Aparecem a cada 5 waves completadas!
+
+👹 Guardião de Cristal   - Emite pulsos de dano radiante
+👑 Rainha dos Insetos    - Invoca reforços + veneno
+🔥 Senhor do Inferno     - Chuva de meteoros + muralha
+⏰ Deus do Tempo         - O mais rápido! Clones e distorção
+🌪️ Vórtex Cósmico       - Atração gravitacional
+
+DICA: Prepare muita defesa antes de um boss aparecer!
+
+════════════════════════════════════════════════════════════════
+
+⚡ SISTEMA DE COMBOS:
+──────────────────────
+Combo Multiplicador:
+• Aparece ao matar 2+ inimigos em sequência rápida
+• Cada kill consecutivo aumenta o combo
+• Mostra 🔥 Combo x2, x3, x4... na tela
+• Reseta quando você leva dano
+• Derrotar um boss inicia combo de 10!
+
+════════════════════════════════════════════════════════════════
+
+💡 ESTRATÉGIAS RECOMENDADAS:
+──────────────────────────────
+
+INÍCIO (Waves 1-3):
+  1. Compre Vida +5 ou Dano +1 para começar
+  2. Foque em dano para matar rápido
+  3. Evitar tomar dano maximize seus ganhos
+  4. Economize moedas para upgrades maiores
+
+MID-GAME (Waves 4-7):
+  5. Compre Duplo ou Triplo (mais projéteis = mais dano)
+  6. Aumente sua defesa progressivamente
+  7. Prepare-se para o primeiro boss
+  8. Escolha um efeito especial (Penetração ou Explosão)
+
+LATE-GAME (Waves 8+):
+  9. Foque em multiplicadores de dano/velocidade
+  10. Balanceie HP com dano baseado no seu DPS
+  11. Use Onda de Choque contra groups
+  12. Penetração é ótima para tanques
+  13. Prep para cada boss com investimento defensivo
+
+PRÓ TIPS:
+  • Explosão > Penetração para hoards
+  • Velocidade +60% = dispara MUITO mais rápido
+  • Defesa reduz dano, vale investir cedo
+  • Rastreador persegue inimigos escondidos
+  • Level up oferece upgrades aleatórios - aproveite!
+
+════════════════════════════════════════════════════════════════
+
+☠️ MORTE:
+──────────
+Quando sua vida chega a 0:
+• Modal de morte aparece mostrando suas estatísticas
+• Level alcançado
+• Total de kills
+• Dano total recebido
+• Moedas ganhas
+• K/D Ratio (kills / dano recebido)
+• Waves completadas
+
+Clique "REINICIAR JOGO" para voltar ao começo com limpar
+
+════════════════════════════════════════════════════════════════
+
+🎮 DICA FINAL:
+───────────────
+Este é um roguelike/clicker game de sobrevivência!
+Quanto mais tempo você sobreviver, mais forte fica.
+Encontre o balanço entre vida, defesa e dano.
+Cada run é uma chance de vencer e melhorar suas habilidades!
+
+BOA SORTE! 🎮✨
+════════════════════════════════════════════════════════════════
