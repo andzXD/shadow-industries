@@ -2,187 +2,324 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>RPG Navegador - Otimizado</title>
     <style>
         /* ============ RESPONSIVIDADE MOBILE ============ */
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
+            body {
+                min-height: 100vh;
+                padding: 0;
+                margin: 0;
+            }
+            
             .container {
                 flex-direction: column !important;
-                padding: 10px !important;
-                gap: 10px !important;
+                padding: 8px !important;
+                gap: 8px !important;
+                width: 100% !important;
+                max-width: 100% !important;
             }
             
             .game-section {
                 width: 100% !important;
                 flex: none !important;
+                gap: 8px !important;
             }
             
             canvas {
                 width: 100% !important;
                 height: auto !important;
                 max-width: 100% !important;
-            }
-            
-            .sidebar {
-                width: 100% !important;
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-                gap: 8px !important;
-            }
-            
-            .sidebar .panel {
-                flex: 1 1 calc(50% - 4px) !important;
-                min-width: 140px !important;
-                max-height: none !important;
-                padding: 8px !important;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
-            }
-            
-            .stat-item {
-                padding: 5px !important;
-                font-size: 10px !important;
-            }
-            
-            .stat-label {
-                font-size: 7px !important;
-            }
-            
-            .stat-value {
-                font-size: 11px !important;
+                aspect-ratio: 700 / 500;
+                border: 2px solid #00ff88 !important;
+                box-shadow: 0 0 15px rgba(0, 255, 136, 0.3) !important;
             }
             
             .ui-panel {
-                padding: 10px !important;
+                padding: 8px !important;
+                gap: 8px !important;
             }
             
-            .panel-title {
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) !important;
+                gap: 6px !important;
+            }
+            
+            .stat-item {
+                padding: 6px !important;
+                font-size: 9px !important;
+                border-left: 2px solid #00ff88 !important;
+            }
+            
+            .stat-label {
+                font-size: 6px !important;
+            }
+            
+            .stat-value {
                 font-size: 10px !important;
             }
             
-            .upgrade-button {
-                padding: 5px 6px !important;
+            /* Sidebar como abas */
+            .sidebar {
+                width: 100% !important;
+                flex-direction: row !important;
+                gap: 0 !important;
+                padding: 0 !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .sidebar .panel {
+                flex: 1 !important;
+                min-width: 0 !important;
+                max-height: 180px !important;
+                padding: 6px !important;
                 font-size: 8px !important;
+                border-radius: 3px !important;
+                margin: 0 2px !important;
+            }
+            
+            .sidebar .panel:first-child {
+                margin-left: 0;
+            }
+            
+            .sidebar .panel:last-child {
+                margin-right: 0;
+            }
+            
+            .panel-title {
+                font-size: 8px !important;
+                margin-bottom: 4px !important;
+                padding-bottom: 2px !important;
             }
             
             .metric-item {
-                font-size: 8px !important;
-                padding: 3px !important;
+                font-size: 7px !important;
+                padding: 2px !important;
+                margin-bottom: 3px !important;
+            }
+            
+            .upgrade-button {
+                padding: 4px 6px !important;
+                font-size: 7px !important;
+                margin-bottom: 2px !important;
             }
             
             .difficulty-panel button {
-                font-size: 8px !important;
+                font-size: 7px !important;
                 padding: 4px 6px !important;
             }
         }
 
         @media (max-width: 500px) {
             body {
-                font-size: 12px !important;
+                font-size: 11px !important;
             }
             
             .container {
                 padding: 5px !important;
+                gap: 5px !important;
             }
             
-            .sidebar .panel {
-                flex: 1 1 100% !important;
-                min-width: 100% !important;
+            .game-section {
+                gap: 5px !important;
+            }
+            
+            canvas {
+                aspect-ratio: 700 / 500;
+                border: 1.5px solid #00ff88 !important;
+            }
+            
+            .ui-panel {
+                padding: 6px !important;
             }
             
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
+                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)) !important;
+                gap: 4px !important;
             }
             
             .stat-item {
                 padding: 4px !important;
+                font-size: 8px !important;
+            }
+            
+            .stat-label {
+                font-size: 5px !important;
+            }
+            
+            .stat-value {
+                font-size: 9px !important;
+            }
+            
+            .sidebar {
+                margin-bottom: 8px !important;
+            }
+            
+            .sidebar .panel {
+                max-height: 150px !important;
+                padding: 5px !important;
+                font-size: 7px !important;
+                margin: 0 1px !important;
             }
             
             .panel {
-                padding: 6px !important;
+                padding: 5px !important;
             }
             
-            .difficulty-panel, .metrics-panel, .shop-panel {
-                max-height: 150px !important;
-                overflow-y: auto !important;
+            .panel-title {
+                font-size: 7px !important;
+                margin-bottom: 3px !important;
             }
             
-            /* Ajustar botões de menu para mobile */
+            .metric-item {
+                font-size: 6px !important;
+                padding: 2px !important;
+                margin-bottom: 2px !important;
+            }
+            
+            .metric-label {
+                font-size: 6px !important;
+            }
+            
+            .metric-value {
+                font-size: 6px !important;
+            }
+            
+            .upgrade-button {
+                padding: 3px 5px !important;
+                font-size: 6px !important;
+                margin-bottom: 2px !important;
+            }
+            
+            .difficulty-panel button {
+                font-size: 6px !important;
+                padding: 3px 5px !important;
+            }
+            
+            /* Menu mobile */
             .menu h1 {
-                font-size: 28px !important;
+                font-size: 24px !important;
             }
             
             .menu h2 {
-                font-size: 22px !important;
+                font-size: 18px !important;
             }
             
             .menu button {
-                min-width: 180px !important;
-                padding: 10px 25px !important;
-                font-size: 14px !important;
+                min-width: 160px !important;
+                padding: 10px 20px !important;
+                font-size: 12px !important;
             }
             
-            /* Ajustar modal para mobile */
+            /* Modal mobile */
             .modal-content {
-                max-width: 90% !important;
-                padding: 15px !important;
-            }
-            
-            .death-content {
-                max-width: 90% !important;
-                padding: 20px !important;
-            }
-            
-            .death-title {
-                font-size: 22px !important;
-            }
-            
-            .death-stats {
+                max-width: 90vw !important;
                 padding: 12px !important;
             }
             
-            .death-stat {
-                font-size: 11px !important;
+            .death-content {
+                max-width: 90vw !important;
+                padding: 15px !important;
             }
             
-            /* Ajustar botões superiores */
-            .menu + div {
+            .death-title {
+                font-size: 18px !important;
+            }
+            
+            .death-stats {
+                padding: 10px !important;
+            }
+            
+            .death-stat {
+                font-size: 10px !important;
+            }
+            
+            /* Botões superiores */
+            .top-buttons {
                 top: 5px !important;
                 right: 5px !important;
-                gap: 3px !important;
+                gap: 2px !important;
             }
             
-            .menu + div button {
-                width: 50px !important;
+            .top-buttons button {
+                width: 45px !important;
                 padding: 3px !important;
-                font-size: 8px !important;
+                font-size: 7px !important;
             }
         }
 
-        /* Touch controls positioning for mobile */
-        @media (max-width: 900px) {
+        /* Ajustes para telas muito pequenas */
+        @media (max-width: 380px) {
+            .menu h1 {
+                font-size: 20px !important;
+            }
+            
+            .menu h2 {
+                font-size: 16px !important;
+            }
+            
+            .menu button {
+                min-width: 140px !important;
+                padding: 8px 18px !important;
+                font-size: 11px !important;
+                gap: 12px !important;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            
+            .sidebar .panel {
+                flex: 0 1 calc(25% - 2px) !important;
+            }
+            
+            .top-buttons button {
+                width: 40px !important;
+                padding: 2px !important;
+                font-size: 6px !important;
+            }
+        }
+
+        /* Touch controls - otimizado para mobile */
+        @media (max-width: 768px) {
             #mobileControls {
                 display: block !important;
-                bottom: 10px !important;
-                left: 10px !important;
+                bottom: 15px !important;
+                left: 15px !important;
+                z-index: 1000;
+            }
+            
+            #joystickArea {
+                width: 110px !important;
+                height: 110px !important;
+                background: rgba(0, 255, 136, 0.15) !important;
+                border: 2px solid #00ff88 !important;
+            }
+            
+            #joystickKnob {
+                width: 45px !important;
+                height: 45px !important;
             }
             
             #mobileFireBtn {
                 display: block !important;
                 bottom: 20px !important;
-                right: 20px !important;
-                width: 70px !important;
-                height: 70px !important;
+                right: 15px !important;
+                width: 75px !important;
+                height: 75px !important;
+                background: rgba(255, 0, 100, 0.25) !important;
+                border: 2.5px solid #ff0064 !important;
+                z-index: 1000;
             }
             
             #mobileFireBtn div {
-                font-size: 24px !important;
-                margin-top: 16px !important;
+                font-size: 28px !important;
+                margin-top: 18px !important;
             }
-            
+        }
+
+        @media (max-width: 500px) {
             #joystickArea {
                 width: 100px !important;
                 height: 100px !important;
@@ -191,6 +328,18 @@
             #joystickKnob {
                 width: 40px !important;
                 height: 40px !important;
+            }
+            
+            #mobileFireBtn {
+                width: 65px !important;
+                height: 65px !important;
+                bottom: 15px !important;
+                right: 12px !important;
+            }
+            
+            #mobileFireBtn div {
+                font-size: 24px !important;
+                margin-top: 15px !important;
             }
         }
 
@@ -265,6 +414,7 @@
   gap: 25px;
   z-index: 9999;
   font-family: 'Courier New', monospace;
+  padding: 20px;
 }
 
 .menu h1 {
@@ -312,6 +462,15 @@
 
 .hidden {
   display: none !important;
+}
+
+.top-buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  gap: 5px;
 }
 
     </style>
@@ -449,7 +608,7 @@
         </div>
     </div>
 
-    <div style="position: fixed; top: 10px; right: 10px; z-index: 999; display: flex; gap: 5px;">
+    <div class="top-buttons">
         <button class="upgrade-button" style="width: 60px; padding: 5px;" onclick="showTutorial()">📖 GUIA</button>
         <button class="upgrade-button" style="width: 80px; padding: 5px;" onclick="showAchievements()">🏆 CONQUISTAS</button>
     </div>
